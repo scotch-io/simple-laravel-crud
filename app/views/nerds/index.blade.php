@@ -35,7 +35,7 @@
 		</tr>
 	</thead>
 	<tbody>
-	@foreach($nerds as $key => $value)
+	@forelse($nerds as $key => $value)
 		<tr>
 			<td>{{ $value->id }}</td>
 			<td>{{ $value->name }}</td>
@@ -60,6 +60,10 @@
 
 			</td>
 		</tr>
+@empty
+<tr>
+   <th>No Found</th>
+</tr>
 	@endforeach
 	</tbody>
 </table>
